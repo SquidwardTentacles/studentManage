@@ -16,12 +16,14 @@
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
-      <style>
-          .login-panel{
-            margin-top: 180px;
-          }
-          /* 上下左右居中 */
-          /* html,body{
+  <style>
+    .login-panel {
+      margin-top: 180px;
+    }
+
+    /* 上下左右居中 */
+
+    /* html,body{
             height: 100%;
           }
           body{
@@ -29,16 +31,11 @@
             justify-content: center;
             align-items: center;
           } */
-          .code-img{
-            height: 34px;
-          }
-          .icon-img{
-            height:34px ;
-          }
-          .icon-img img{
-            height: 34px;
-          }
-        </style>
+
+    .code-img {
+      height: 34px;
+    }
+  </style>
 </head>
 
 <body>
@@ -49,11 +46,11 @@
           <div class="panel-heading">学员后台管理系统</div>
 
           <div class="panel-body">
-            <form class="form-horizontal" action="/login" method="POST">
+            <form class="form-horizontal" action="register" method="POST">
               <div class="form-group">
                 <label for="userName" class="col-sm-2 control-label">用户名</label>
                 <div class="col-sm-10">
-                  <input type="text" name="usernane" class="form-control" id="userName" placeholder="请输入用户名">
+                  <input type="text" name="username" class="form-control" id="userName" placeholder="请输入用户名">
                 </div>
               </div>
               <div class="form-group">
@@ -62,24 +59,15 @@
                   <input type="password" name="password" class="form-control" id="userPass" placeholder="请输入密码">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="icon" class="col-sm-2 control-label">验证码</label>
-                <div class="col-sm-6">
-                  <input type="text" name="code" class="form-control" id="icon" placeholder="请输入验证码">
-                </div>
-                <div class="col-sm-4 icon-img">
-                    <img class="code-img" src="/login/login.png" alt="">
-                  </div>
-              </div>
+
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
 
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">登录</button>
-                  <a href="register" class="btn btn-danger">注册</a>
+                <div class="col-sm-offset-2 col-sm-4">
+                  <button type="submit" class="btn btn-default btn-danger btn-block">注册</button>
                 </div>
               </div>
             </form>
@@ -95,12 +83,3 @@
 <script src="../lib/js/jquery-1.12.4.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../lib/js/bootstrap.min.js"></script>
-
-<script>
-  $(function(){
-    $('.code-img').click(function(){
-      $(this).attr('src',$(this).attr('src')+'?${Math.random()}')
-      // alert('a')
-    })
-  })
-</script>
